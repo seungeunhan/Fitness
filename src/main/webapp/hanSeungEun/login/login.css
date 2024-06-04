@@ -1,0 +1,176 @@
+.allstyles {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.allcenter {
+    /*가운데 정렬*/
+    display: block;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical_center{
+    /*수직정렬*/
+    position: absolute;
+    top : 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/********************************************/
+.wrap {
+    width: 100%;
+    height: auto;
+}
+
+.logo_wrap {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+
+.img_logo {
+    width: 12%;
+    height: 95%;
+    min-width: 150px;
+
+}
+
+.input_wrap {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+}
+
+.login_wrap {
+    width: 18%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.login_box {
+    padding-left: 15px;
+    display: block; /*가로 한줄 차지*/
+    width: 99%;
+    height: 45px;
+    border: solid 1px #808080;
+    border-radius: 8px 8px 0 0 / 8px 8px 0 0 ;
+    outline: none;
+    font-size: 1rem;
+    /* border-radius: top-left-x top-right-x bottom-right-x bottom-left-x /
+       top-left-y top-right-y bottom-right-y bottom-left-y */
+}
+
+.border_radius_1 {
+    border-radius: 0 0 8px 8px /  0 0 8px 8px ;
+    /* border-radius: top-left-x top-right-x bottom-right-x bottom-left-x /
+       top-left-y top-right-y bottom-right-y bottom-left-y */
+}
+
+.find_text {
+    float: right;
+    margin-top: 10px;
+    text-decoration-line: none; /*a태그 밑줄 제거*/
+    font-size: 0.9rem;
+    color: black;
+}
+
+.social_list{
+    display: flex;
+    justify-content: center;
+    width: 97%;
+    height: 35px;
+    padding-bottom: 70px;
+}
+
+.social_list_1{
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 100%;
+}
+
+.social_list_1 > img {
+    width: 45px;
+    height: 45px;
+}
+
+.social_text {
+    font-size: 0.9rem;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+
+.btn_login{
+    display: block;
+    width: 95%;
+    height: 50px;
+    background-color: rgb(136, 113, 89);
+    color: white;
+    border-radius: 5px;
+    border: solid 1px #615243;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.btn_login:hover {
+	cursor: pointer;
+	background-color: #615243;
+}
+
+.btn_join{
+    display: block;
+    width: 95%;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    border: solid 1px #615243;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.btn_join:hover {
+	cursor: pointer;
+	background-color: #ECEBEB;
+}
+
+.text_link {
+    font-size: 1rem;
+    color: black;
+}
+
+
+
+@media screen and (max-width : 1200px) { 
+    .img_logo { 
+        min-width: 150px; 
+    } 
+
+    .login_wrap{
+        min-width: 200px;
+    }
+    .btn_login {
+        min-width: 180px;
+    }
+
+  } 
+  
+@media screen and (max-width : 768px) { 
+    .img_logo { 
+        min-width: 120px; 
+    } 
+
+    .login_wrap{
+        min-width: 180px;
+    }
+
+    .btn_login {
+        min-width: 180px;
+    }
+
+  }

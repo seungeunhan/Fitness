@@ -1,0 +1,123 @@
+body {
+    color: #555;
+    background: #eeeeee;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;}
+
+h1 {
+    padding: 50px 0;
+    font-weight: 400;
+    text-align: center;}
+
+
+.main {
+    min-width: 320px;
+    max-width: 800px;
+    padding: 50px;
+    margin: 0 auto;
+    background: #ffffff;}
+
+section {
+    display: none;
+    padding: 10px 0 0;
+    border-top: 1px solid #ddd;}
+
+/*라디오버튼 숨김*/
+#tab1, #tab2 {
+      display: none;
+    }
+
+label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 160px;
+    min-width: 60px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    box-sizing: border-box;
+    border: 1px solid transparent;}
+    
+
+button:hover {
+    color: #615243;
+    cursor: pointer;}
+    
+   
+#btn_ok:hover {
+    color: #615243;
+    cursor: pointer;}    
+
+/*input 클릭시, label 스타일*/
+input:checked + label {
+      color: #555;
+      border: 1px solid #ddd;
+      border-top: 2px solid #615243;
+      border-bottom: 1px solid #ffffff;}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2{
+    display: block;}
+
+.vertical_center{
+    /*수직정렬*/
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+p:nth-of-type(1) {
+    font-size: 14px;
+    font-weight: bold;
+	margin-bottom: 50px;
+}
+
+/********************************/
+
+
+.btn_ok {
+	display : block;
+	width: 130px;
+    height: 40px;
+    margin-top: 50px;
+    font-size: 15px;
+    background-color: white;
+    border: solid 1px black;
+   	text-align : center;
+}
+
+.btn_ok:hover {
+	cursor: pointer;
+	background-color: #ECEBEB;
+}
+
+span {
+	font-size : 25px;
+}
+
+table, th, td {
+  border: solid 1px black;
+  border-collapse: collapse;
+}
+
+th {
+	width : 100px;
+	height : 30px;
+	background-color : #DBC7A5;
+}
+
+td {
+	width : 200px;
+	text-align : center;
+	height : 30px;
+}
+
+

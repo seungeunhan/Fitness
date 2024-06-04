@@ -1,0 +1,165 @@
+body {
+    color: #555;
+    background: #eeeeee;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;}
+
+h1 {
+    padding: 50px 0;
+    font-weight: 400;
+    text-align: center;}
+
+
+.main {
+    min-width: 320px;
+    max-width: 800px;
+    padding: 50px;
+    margin: 0 auto;
+    background: #ffffff;}
+
+section {
+    display: none;
+    padding: 10px 0 0;
+    border-top: 1px solid #ddd;}
+
+/*라디오버튼 숨김*/
+#tab1, #tab2 {
+      display: none;
+    }
+
+label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 108px;
+    min-width: 60px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    box-sizing: border-box;
+    border: 1px solid transparent;}
+    
+
+label:hover {
+    color: #615243;
+    cursor: pointer;}
+
+button:hover {
+    color: #615243;
+    cursor: pointer;}
+
+/*input 클릭시, label 스타일*/
+input:checked + label {
+      color: #555;
+      border: 1px solid #ddd;
+      border-top: 2px solid #615243;
+      border-bottom: 1px solid #ffffff;}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2{
+    display: block;}
+
+.vertical_center{
+    /*수직정렬*/
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center {
+    /*가운데 정렬*/
+    display: block;  
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+p:nth-of-type(1) {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.name_input {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.email_input {
+    margin-bottom: 20px;
+}
+
+.name_input > input {
+    width: 250px;
+    height: 30px;
+    margin-left: 46px;
+    border: solid 1px #ddd;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+
+.email_input > input {
+    width: 250px;
+    height: 30px;
+    margin-left: 30px;
+    border: solid 1px #ddd;
+    padding-left: 10px;
+}
+
+.id_input > input {
+    width: 250px;
+    height: 30px;
+    margin-left: 30px;
+    border: solid 1px #ddd;
+    padding-left: 10px;
+}
+
+.pwd_input > input {
+	width: 250px;
+    height: 30px;
+    margin-left: 30px;
+    border: solid 1px #ddd;
+    padding-left: 10px;
+}
+
+.span_font{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.id_out {
+    margin-top: 80px;
+}
+
+.id_out span{
+    font-size: 17px;
+    color: blue;
+    font-weight: bold;
+}
+
+.btn_login {
+    width: 90px;
+    height: 35px;
+    margin-top: 50px;
+    font-size: 15px;
+}
+
+.btn_back {
+    width: 90px;
+    height: 35px;
+    margin: 50px 15px 0 0;
+    font-size: 15px;
+}
+
+.btn_next {
+	width: 90px;
+    height: 35px;
+    margin-top: 50px;
+    font-size: 15px;
+}
+

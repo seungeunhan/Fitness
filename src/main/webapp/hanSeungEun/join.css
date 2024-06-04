@@ -1,0 +1,217 @@
+.allstyles {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.center {
+    /*가운데 정렬*/
+    display: block;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical_center{
+    /*수직정렬*/
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/********************************************/
+
+.wrap {
+    width: 30%;
+    height: auto;
+    min-width: 570px;
+}
+
+.logo_wrap {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.img_logo {
+    width: 35%;
+    height: 95%;
+    min-width: 150px;
+
+}
+
+/*폼 테두리(gray)*/
+.inner{
+    width: 90%;
+    border-radius: 5px;
+    border: solid 1px #b1b0b0;
+    padding: 35px 30px 35px 30px;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+.inner > label {
+    margin-right: 30px;
+}
+
+
+
+/*input 박스 스타일*/
+.inner > input {
+    width: 76%;
+    height: 40px;
+    border-radius: 3px;
+    border: solid 1px #dadada;
+    font-size: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+input[name="id"] {
+    margin-left: 15px;
+    width: 57%;
+}
+
+input[name="pwd"] {
+    margin-top: 15px;
+}
+
+input[name="name"] {
+    margin-left: 32px;
+}
+
+input[name="email"] {
+    margin-left: 15px;
+    width: 76%;
+}
+
+input[name="birth"] {
+    margin-top: 15px;
+}
+
+input[name="gender"] {
+    margin-left: 62px;
+}
+
+/*이메일~휴대번호 적용*/
+:nth-child(n+7):nth-child(-n+10) {
+    margin-top: 15px;
+}
+
+
+/*성별 input 박스 사이즈*/
+input[name="gender"] {
+    width: 37.4%; 
+    background-color: white;
+    color: #727171; 
+}
+
+/*input 박스 클릭 시 테두리 색상*/
+.inner > input:focus {
+    border-color: #615243;
+    outline: none;
+    color: #615243;
+}
+
+
+/*중복, 인증 버튼 스타일*/
+.inner > button {
+    width: 80px;
+    height: 40px;
+    background-color: white;
+    border: solid 1px #615243;
+    border-radius: 3px;
+    color: #615243;
+    font-size: 15px;
+}
+
+.btn_wrap {
+    margin-top: 70px;
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.btn_join {
+    background-color: #615243;
+    border: solid 1px #615243;
+    border-radius: 4px;
+    color: white;
+    width: 300px;
+    height: 40px;
+    font-size: 17px;
+}
+
+.select{
+    width: 100%;
+    height: auto;
+    margin-top:15px;
+}
+
+.select input[type=radio]{
+    display: none;
+}
+.select input[type=radio]+label{
+    display: inline-block;
+    cursor: pointer;
+    height: 40px;
+    width: 166px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    line-height: 24px;
+    text-align: center;
+    font-size:15px;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+.select input[type=radio]:checked+label{
+    border: solid 1px #615243;
+    color: #615243 ;
+    background-color: #EBDFC3;
+}
+
+.select>label:nth-of-type(1) {
+    margin-right: 62px;
+}
+
+
+.idCheck_alert {
+	color : red;
+	font-size : 15px;
+	margin-left :100px;
+	
+}
+
+
+
+@media screen and (max-width : 1200px) { 
+    .wrap{
+        min-width: 570px;
+    }
+    
+
+  } 
+
+    
+@media screen and (max-width : 768px) { 
+    .wrap{
+        min-width: 400px;
+    }
+
+    .inner {
+        padding: 20px 10px;
+    }
+
+    .inner > label {
+        margin-right: 5px;
+    }
+
+    .inner > button{
+        width: 60px;
+    }
+
+    :nth-child(n+6):nth-child(-n+7) {
+        min-width: 140px;   
+    }
+
+  }

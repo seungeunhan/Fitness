@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+header {
+    background-color: #ffffff; /* 네비게이션 바 배경색 */
+    padding: 10px 0; /* 상단 여백과 하단 여백 */
+    width: 100%; /* 헤더의 너비를 창의 너비와 동일하게 설정 */
+}
+
+nav {
+    max-width: 1200px; /* 네비게이션의 최대 너비를 설정 (원하는 최대 너비로 조절) */
+    margin: 0 auto; /* 가운데 정렬을 위해 좌우 여백을 자동으로 설정 */
+    display: flex;
+    justify-content: space-between; /* 요소 사이의 여백을 최대화하여 요소를 정렬 */
+    align-items: center; /* 세로 방향으로 요소들을 중앙 정렬 */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox 레이아웃 적용 */
+    justify-content: space-between; /* 가로 방향으로 요소를 최대한 간격을 벌려 배치 */
+    align-items: center; /* 세로 방향으로 요소들을 중앙 정렬 */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* 메뉴 텍스트 색상 */
+    padding: 10px 20px; /* 메뉴 간격 */
+}
+
+nav ul li.login a {
+    background-color: #8B4513 !important; /* 로그인 버튼 배경색 (갈색) */
+    color: #fff; /* 로그인 버튼 텍스트 색상 */
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+}
+
+nav ul li a:hover {
+    color: #000; /* 마우스 오버 시 텍스트 색상 */
+}
+
+/*지도 API*/
+gmp-map {
+  height: 100%; /* 화면 높이의 50% */
+  width: auto; /* 화면 너비의 80% */
+}
+
+html, body {
+  height: 100%;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}

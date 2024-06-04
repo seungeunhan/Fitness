@@ -1,0 +1,75 @@
+*{
+	margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-size: 14px;
+	font-family: "맑은 고딕", 나눔고딕, 돋움, sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:active, a:hover {
+	text-decoration: underline;
+	color: #F28011;
+}
+
+.calendar {
+	width: 280px;
+	margin: 30px auto;
+}
+.calendar .title{
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+	font-weight: 600;
+}
+
+.calendar .selectField {
+	border: 1px solid #999;
+	padding: 2px 7px;
+	border-radius: 3px;
+	font-family: "맑은 고딕", 나눔고딕, 돋움, sans-serif;
+	vertical-align: baseline;
+}
+
+.calendar table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.calendar table thead tr:first-child{
+	background: #887159;
+}
+
+.calendar table td{
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #887159;
+}
+
+.calendar table td:nth-child(7n+1){
+	color: red;
+}
+.calendar table td:nth-child(7n){
+	color: blue;
+}
+.calendar table td.gray {
+	color: #ccc;
+}
+.calendar table td.today{
+	font-weight:700;
+	background: #EBDAC3;
+}
+
+.calendar .footer{
+	height: 25px;
+	line-height: 25px;
+	text-align: right;
+	font-size: 12px;
+}

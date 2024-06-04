@@ -1,0 +1,229 @@
+body {
+    color: #555;
+    background: #eeeeee;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;}
+
+h1 {
+    padding: 50px 0;
+    font-weight: 400;
+    text-align: center;}
+
+
+.main {
+    min-width: 320px;
+    max-width: 800px;
+    padding: 50px;
+    margin: 0 auto;
+    background: #ffffff;}
+
+section {
+    display: none;
+    padding: 10px 0 0;
+    border-top: 1px solid #ddd;}
+
+/*라디오버튼 숨김*/
+#tab1, #tab2 {
+      display: none;
+    }
+
+label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 160px;
+    min-width: 60px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    box-sizing: border-box;
+    border: 1px solid transparent;}
+    
+
+button:hover {
+    background-color: #615243;
+    cursor: pointer;}
+    
+#btn_ok:hover {
+    background-color: #ECEBEB;
+    cursor: pointer;}    
+
+/*input 클릭시, label 스타일*/
+input:checked + label {
+      color: #555;
+      border: 1px solid #ddd;
+      border-top: 2px solid #615243;
+      border-bottom: 1px solid #ffffff;}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2{
+    display: block;}
+
+.vertical_center{
+    /*수직정렬*/
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center {
+    /*가운데 정렬*/ 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+p:nth-of-type(1) {
+    font-size: 14px;
+    font-weight: bold;
+	margin-bottom: 50px;
+}
+
+
+.name_input {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.phone_input {
+    margin-bottom: 20px;
+}
+
+
+.revNum_input > input{
+	width: 250px;
+    height: 35px;
+    margin-left: 30px;
+    border: solid 1px #ddd;
+    padding-left: 10px;
+   	font-size: 15px;
+}
+
+.name_input > input {
+    width: 250px;
+    height: 35px;
+    margin-left: 55px;
+    border: solid 1px #ddd;
+    padding-left: 10px;
+    font-size: 15px;
+    
+}
+
+
+.phone_input > input {
+    width: 250px;
+    height: 35px;
+    margin-left: 30px;
+    border: solid 1px #ddd;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.id_input > input {
+    width: 250px;
+    height: 35px;
+    margin-left: 30px;
+    border: solid 1px #ddd;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.pwd_input > input {
+	width: 250px;
+    height: 30px;
+    margin-left: 30px;
+    border: solid 1px #ddd;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.span_font{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.rev_out {
+    margin-top: 50px;
+}
+
+.rev_out span{
+    font-size: 17px;
+    color: blue;
+    font-weight: bold;
+}
+
+/*예약조회 확인 버튼*/
+#btn_ok {
+	width: 130px;
+    height: 40px;
+    margin-top: 50px;
+    font-size: 15px;
+    background-color: white;
+    border: solid 1px black;
+   	text-align : center;
+}
+
+/*예약 번호 찾기 - 확인 버튼*/
+#btn_ok1{
+	width: 130px;
+    height: 40px;
+    margin-top: 50px;
+    font-size: 15px;
+    background-color: white;
+    border: solid 1px black;
+   	display : block;
+   	margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#btn_ok1:hover {
+	cursor: pointer;
+	background-color: #ECEBEB;
+}
+
+/*예약조회-예약번호 찾기 버튼*/
+.btn_scRev{
+	width: 130px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 20px;
+    font-size: 15px;
+    background-color: #887159;
+    border: solid 1px black;
+    color : white;
+}
+
+.btn_check {
+    width: 110px;
+    height: 40px;
+    margin: 60px 15px 0 0;
+    font-size: 15px;
+    background-color: #887159;
+    border: solid 1px black;
+    color : white;
+}
+
+.btn_rev {
+	width: 110px;
+    height: 40px;
+    margin-top: 60px;
+    font-size: 15px;
+    background-color: #887159;
+    border: solid 1px black;
+    background-color: white;
+    border: solid 1px black;
+}
+
+.btn_rev:hover {
+	cursor: pointer;
+	background-color: #ECEBEB;
+}
+
+
+
+
