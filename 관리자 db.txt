@@ -1,0 +1,188 @@
+CREATE TABLE `answersa` (
+  `num` INT NOT NULL AUTO_INCREMENT,
+  `content` TEXT,
+  `date` DATETIME,
+  `posnum` INT
+);
+
+CREATE TABLE `chargeinfosa` (
+  `num` INT NOT NULL AUTO_INCREMENT,
+  `user` INT,
+  `code` VARCHAR(255),
+  `price` INT,
+  `date` VARCHAR(255),
+  `chamet` VARCHAR(50),
+  `item` INT,
+  `ccflag` INT,
+  PRIMARY KEY (`num`)
+);
+
+CREATE TABLE `companysa` (
+  `num` INT NOT NULL AUTO_INCREMENT,
+  `id` VARCHAR(255),
+  `postnum` VARCHAR(255),
+  `city` VARCHAR(255),
+  `streetaddr` VARCHAR(255),
+  `size` INT,
+  `callnum` VARCHAR(255),
+  `companyinfo` VARCHAR(255),
+  PRIMARY KEY (`num`)
+);
+
+CREATE TABLE `healthitemsa` (
+  `num` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255),
+  `hcontent` TEXT,
+  `fcperiod` VARCHAR(255),
+  `ptnum` INT,
+  `gxnum` INT,
+  `frnum` INT,
+  `sellperiod` VARCHAR(255),
+  `price` INT,
+  `sellflag` INT,
+  PRIMARY KEY (`num`)
+);
+
+CREATE TABLE `locationsa` (
+  `num` INT NOT NULL AUTO_INCREMENT,
+  `id` VARCHAR(255),
+  `postnum` VARCHAR(255),
+  `city` VARCHAR(255),
+  `streetaddr` VARCHAR(255),
+  `parking` INT,
+  `size` INT,
+  `callnum` VARCHAR(255),
+  `companyinfo` VARCHAR(255),
+  `ip` VARCHAR(255),
+  PRIMARY KEY (`num`)
+);
+
+CREATE TABLE `payitemsa` (
+  `num` INT NOT NULL AUTO_INCREMENT,
+  `usernum` INT,
+  `paydate` VARCHAR(255),
+  `itemnum` INT,
+  `payprice` INT,
+  `paymethod` VARCHAR(255),
+  `payflag` INT,
+  `ccflag` INT,
+  `payback` INT,
+  PRIMARY KEY (`num`)
+);
+
+
+CREATE TABLE usersa (
+  num NOT NULL AUTO_INCREMENT,
+  id VARCHAR(50),
+  pwd VARCHAR(50),
+  name VARCHAR(50),
+  gender INT,
+  phone VARCHAR(20),
+  birth VARCHAR(255),
+  email VARCHAR(100),
+  postnum VARCHAR(20),
+  city VARCHAR(50),
+  streetaddr VARCHAR(100),
+  joindate VARCHAR(255),
+  point INT,
+  sns INT,
+  snsid VARCHAR(50) NULL,
+  snspwd VARCHAR(50) NULL,
+  authority INT,
+  company INT,
+  frnum INT,
+  PRIMARY KEY (num)
+);
+
+
+CREATE TABLE qnasa (
+  num INT NOT NULL AUTO_INCREMENT,
+  title VARCHAR(255),
+  content TEXT,
+  date VARCHAR(255),
+  usernum INT,
+  ip VARCHAR(15),
+  secret TINYINT,
+  frnum INT,
+  ansflag TINYINT,
+  PRIMARY KEY (num)
+);
+
+
+CREATE TABLE reservationsa (
+  num INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  user VARCHAR(255),
+  name VARCHAR(255),
+  phone VARCHAR(20),
+  email VARCHAR(255),
+  population INT,
+  ccflag TINYINT,
+  frnum INT,
+  reservdate VARCHAR(255),
+  carflag TINYINT,
+  fnflag TINYINT
+);
+
+CREATE TABLE reviewsa (
+  num INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  title VARCHAR(255),
+  content TEXT,
+  date VARCHAR(255),
+  usernum INT,
+  ip VARCHAR(15),
+  frnum INT
+);
+
+
+CREATE TABLE trainersa (
+  num INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  user INT,
+  imgpath VARCHAR(255),
+  career VARCHAR(255),
+  salary INT
+);
+
+
+CREATE TABLE trainerworksa (
+  num INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  trainer INT,
+  date VARCHAR(255),
+  starttime VARCHAR(255),
+  endtime VARCHAR(255),
+  frnum INT
+);
+
+
+DELETE FROM `healthitemsa`;
+INSERT INTO `healthitemsa` (`num`, `name`, `hcontent`, `fcperiod`, `ptnum`, `gxnum`, `frnum`, `sellperiod`, `price`, `sellflag`) VALUES
+	(1, 'health1', '1111', '0000-01-00', 1, 1, 1, '2024-04-25', 50000, 1),
+	(2, 'health2', '1000', '0000-03-00', 0, 0, 2, '2024-04-10', 30000, 0);
+
+-- 테이블 데이터 projectdb.locationsa:~3 rows (대략적) 내보내기
+DELETE FROM `locationsa`;
+INSERT INTO `locationsa` (`num`, `id`, `postnum`, `city`, `streetaddr`, `parking`, `size`, `callnum`, `companyinfo`, `ip`) VALUES
+	(1, 'loc1', '12345', 'New York', '123 Main St', 1, 1000, '123-456-7890', 'Gym A', NULL),
+	(2, 'loc2', '54321', 'Los Angeles', '456 Oak St', 0, 800, '987-654-3210', 'Gym B', NULL),
+	(3, 'loc3', '78945', 'Seoul', '789 DD St', 1, 500, '051-456-7890', 'Gym C', NULL);
+
+
+
+DELETE FROM `trainersa`;
+INSERT INTO `trainersa` (`num`, `user`, `imgpath`, `career`, `salary`) VALUES
+	(1, 1, 'http://drive.google.com/thumbnail?id=1KKVd-4Os41pku4aXvyGrSCIes4VEV0fL&sz=w1000', 'Certified Personal Trainer', 3000),
+	(2, 2, 'http://drive.google.com/thumbnail?id=1ATUv_LxFSchklr1CfR2Q8uhpS1jaye1C&sz=w1000', 'Certified Personal Trainer', 2500),
+	(3, 3, 'http://drive.google.com/thumbnail?id=1hCV_E1FiOhJ1m7Zts79V1vlbx3W3FNyl&sz=w1000', 'Fitness Instructor', 2700),
+	(4, 4, 'http://drive.google.com/thumbnail?id=16L3cg8e8_mSSUs_7IO7Ut5SXPDJH1qvs&sz=w1000', 'Certified Personal Trainer', 2700),
+	(5, 5, 'http://drive.google.com/thumbnail?id=1E_dytVFJ-ooakIerEwOq_9JUTnADB_Bz&sz=w1000', 'Fitness Instructor', 2500),
+	(6, 6, 'http://drive.google.com/thumbnail?id=135lPtkKgyN5qUPx6Lcx0NFlpKHYGq2IP&sz=w1000', 'Fitness Instructor', 3000),
+	(7, 7, 'http://drive.google.com/thumbnail?id=16cMviGMLIAcStSRz3wIpnG2EIfk4uVUU&sz=w1000', 'Certified Personal Trainer', 2700),
+	(8, 8, 'http://drive.google.com/thumbnail?id=1gMedriEHTaCmMEq2U_TTwITL7xi33Ocp&sz=w1000', 'Fitness Instructor', 2500),
+	(9, 9, 'http://drive.google.com/thumbnail?id=1tQQ1EYBCBRCJvmRUkB0XfndumK7oeFVA&sz=w1000', 'Certified Personal Trainer', 3000),
+	(11, 551, '33', '33', 33),
+	(12, 1093, NULL, NULL, NULL);
+
+
+
+
+
+
